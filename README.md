@@ -7,11 +7,13 @@ The original LLaMa release ([facebookresearch/llma](https://github.com/facebookr
 
 This repo contains minimal modifications to run on Apple Silicon M1/M2 and GPU by leveraging Torch MPS.
 
+Have fun 🤩!
+
 ## Setup
 
 First download a) the weights and b) `tokenizer.model`:
 
-1. IPFS: [here](https://ipfs.io/ipfs/Qmb9y5GCkTG7ZzbBWMu2BXwMkzyCKcUjtEKPpgdZ7GEFKm/30B/) or [mirror (note this does not have tokenizer.model)](ipfs://QmSD8cxm4zvvnD35KKFu8D9VjXAavNoGWemPW1pQ3AF9ZZ)
+1. IPFS: [here](https://ipfs.io/ipfs/Qmb9y5GCkTG7ZzbBWMu2BXwMkzyCKcUjtEKPpgdZ7GEFKm/30B/) or a [mirror (note this one does not have tokenizer.model)](https://ipfs.io/ipfs/QmSD8cxm4zvvnD35KKFu8D9VjXAavNoGWemPW1pQ3AF9ZZ/)
 2. BiTorrent: magnet:?xt=urn:btih:ZXXDAUWYLRUXXBHUYEMS6Q5CE5WA3LVA&dn=LLaMA
 
 After downloading, move the files from your Downloads folder to `LLaMa-for-Mac/weights/sharded`
@@ -23,7 +25,9 @@ Next, clone this repository
 Setup a virtualenv (optional) and install Python requirements by running:
 
 `python3.11 -m venv ~/.LLaMa`
+
 `source ~/.env/LLaMa/bin/activate`
+
 `pip install -r requirements.txt`
 
 To run without torch-distributed on single node we must unshard the sharded weights. To do this, run the following, where --path-to-weights points to your `path/to/weights`, and --model points to the model version you downloaded.
