@@ -1,0 +1,5 @@
+torch
+sentencepiece
+fastapi
+gunicorn[standard]
+argparse
