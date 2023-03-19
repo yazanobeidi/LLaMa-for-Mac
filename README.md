@@ -30,11 +30,11 @@ Setup a virtualenv (optional) and install Python requirements by running:
 
 `pip install -r requirements.txt`
 
-To run without torch-distributed on single node we must unshard the sharded weights. To do this, run the following, where --path-to-weights points to your `path/to/weights`, and --model points to the model version you downloaded.
+To run without torch-distributed on single node we must unshard the sharded weights. To do this, run the following, where `--model` points to the model version you downloaded. The path arguments don't need to be changed.
 
-`python3 convert_to_unsharded.py --path-to-weights weights/sharded/ --model 30B --output-path weights/unsharded/`
+`python3 convert_to_unsharded.py --model 30B --path-to-weights LLaMa-for-Mac/weights/sharded --output-path LLaMa-for-Mac/weights/unsharded/`
 
-This will take a minute or so.
+This will take a minute or so to complete.
 
 ## Usage
 
